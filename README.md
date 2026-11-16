@@ -1,6 +1,6 @@
 # Cyber-Physical AMR Security Lab
 
-[Documentação do projeto e guia de publicação no Git](docs/Documentacao_RoboLab.md)
+[Documentação do projeto](docs/Documentacao_RoboLab.md)
 
 ## Correção de movimento do AMR
 
