@@ -1,0 +1,1763 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.9">
+  <world name="warehouse">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <gravity>0 0 -9.8</gravity>
+    <scene>
+      <ambient>0.8 0.8 0.8 1</ambient>
+      <background>0.8 0.85 0.9 1</background>
+    </scene>
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>80 80</size>
+            </plane>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="galpao_safe4">
+      <static>true</static>
+      <link name="estrutura">
+        <visual name="galpao_blender">
+          <geometry>
+            <mesh>
+              <uri>meshes/galpao_safe4.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="estrutura_000">
+          <pose>8.109841 -1.068627 0.305833 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.638379 0.638379 0.315125</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_001">
+          <pose>8.109841 -1.068627 0.562728 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.431196 0.431196 0.203294</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_002">
+          <pose>-0.750000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_003">
+          <pose>1.000000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_004">
+          <pose>2.750000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_005">
+          <pose>4.500000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_006">
+          <pose>6.250000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_007">
+          <pose>8.000000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_008">
+          <pose>9.750000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_009">
+          <pose>11.500000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_010">
+          <pose>13.250000 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_011">
+          <pose>-0.750000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_012">
+          <pose>1.000000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_013">
+          <pose>2.750000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_014">
+          <pose>4.500000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_015">
+          <pose>6.250000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_016">
+          <pose>8.000000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_017">
+          <pose>9.750000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_018">
+          <pose>11.500000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_019">
+          <pose>13.250000 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_020">
+          <pose>14.274400 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_021">
+          <pose>15.911763 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_022">
+          <pose>17.661762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_023">
+          <pose>19.411762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_024">
+          <pose>21.161762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_025">
+          <pose>22.911762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_026">
+          <pose>24.661762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_027">
+          <pose>26.411762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_028">
+          <pose>28.161762 4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_029">
+          <pose>14.161763 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087501 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_030">
+          <pose>15.911763 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_031">
+          <pose>17.661762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_032">
+          <pose>19.411762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_033">
+          <pose>21.161762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087500 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_034">
+          <pose>22.911762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_035">
+          <pose>24.661762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_036">
+          <pose>26.411762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_037">
+          <pose>28.161762 -4.350000 1.425000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.087502 0.087500 2.850000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_038">
+          <pose>1.050000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_039">
+          <pose>2.500000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_040">
+          <pose>3.950000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_041">
+          <pose>1.050000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_042">
+          <pose>2.500000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_043">
+          <pose>3.950000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_044">
+          <pose>4.800000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_045">
+          <pose>6.250000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_046">
+          <pose>7.700000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_047">
+          <pose>4.800000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_048">
+          <pose>6.250000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_049">
+          <pose>7.700000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_050">
+          <pose>8.550000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_051">
+          <pose>10.000000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_052">
+          <pose>11.450000 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_053">
+          <pose>8.550000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_054">
+          <pose>10.000000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_055">
+          <pose>11.450000 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_056">
+          <pose>1.050000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_057">
+          <pose>2.500000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_058">
+          <pose>3.950000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_059">
+          <pose>1.050000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_060">
+          <pose>2.500000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_061">
+          <pose>3.950000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_062">
+          <pose>4.800000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_063">
+          <pose>6.250000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_064">
+          <pose>7.700000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_065">
+          <pose>4.800000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_066">
+          <pose>6.250000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_067">
+          <pose>7.700000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_068">
+          <pose>8.550000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_069">
+          <pose>10.000000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_070">
+          <pose>11.450000 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_071">
+          <pose>8.550000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_072">
+          <pose>10.000000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_073">
+          <pose>11.450000 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_074">
+          <pose>1.050000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_075">
+          <pose>2.500000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_076">
+          <pose>3.950000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_077">
+          <pose>1.050000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_078">
+          <pose>2.500000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_079">
+          <pose>3.950000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_080">
+          <pose>4.800000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_081">
+          <pose>6.250000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_082">
+          <pose>7.700000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_083">
+          <pose>4.800000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_084">
+          <pose>6.250000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_085">
+          <pose>7.700000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_086">
+          <pose>8.550000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_087">
+          <pose>10.000000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_088">
+          <pose>11.450000 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_089">
+          <pose>8.550000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_090">
+          <pose>10.000000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_091">
+          <pose>11.450000 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_092">
+          <pose>1.050000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_093">
+          <pose>2.500000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_094">
+          <pose>3.950000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_095">
+          <pose>1.050000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_096">
+          <pose>2.500000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_097">
+          <pose>3.950000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_098">
+          <pose>4.800000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_099">
+          <pose>6.250000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_100">
+          <pose>7.700000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_101">
+          <pose>4.800000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_102">
+          <pose>6.250000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_103">
+          <pose>7.700000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_104">
+          <pose>8.550000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_105">
+          <pose>10.000000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_106">
+          <pose>11.450000 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_107">
+          <pose>8.550000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_108">
+          <pose>10.000000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_109">
+          <pose>11.450000 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032500 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_110">
+          <pose>15.961763 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_111">
+          <pose>17.411762 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_112">
+          <pose>18.861762 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_113">
+          <pose>15.961763 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_114">
+          <pose>17.411762 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_115">
+          <pose>18.861762 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_116">
+          <pose>19.711763 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_117">
+          <pose>21.161762 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_118">
+          <pose>22.611763 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_119">
+          <pose>19.711763 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_120">
+          <pose>21.161762 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_121">
+          <pose>22.611763 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_122">
+          <pose>23.461763 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_123">
+          <pose>24.911762 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_124">
+          <pose>26.361763 3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_125">
+          <pose>23.461763 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_126">
+          <pose>24.911762 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_127">
+          <pose>26.361763 3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_128">
+          <pose>15.961763 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_129">
+          <pose>17.411762 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_130">
+          <pose>18.861762 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_131">
+          <pose>15.961763 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_132">
+          <pose>17.411762 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_133">
+          <pose>18.861762 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_134">
+          <pose>19.711763 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_135">
+          <pose>21.161762 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_136">
+          <pose>22.611763 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_137">
+          <pose>19.711763 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_138">
+          <pose>21.161762 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_139">
+          <pose>22.611763 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_140">
+          <pose>23.461763 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_141">
+          <pose>24.911762 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_142">
+          <pose>26.361763 2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_143">
+          <pose>23.461763 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_144">
+          <pose>24.911762 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_145">
+          <pose>26.361763 1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_146">
+          <pose>15.961763 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_147">
+          <pose>17.411762 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_148">
+          <pose>18.861762 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_149">
+          <pose>15.961763 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_150">
+          <pose>17.411762 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_151">
+          <pose>18.861762 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_152">
+          <pose>19.711763 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_153">
+          <pose>21.161762 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_154">
+          <pose>22.611763 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_155">
+          <pose>19.711763 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_156">
+          <pose>21.161762 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_157">
+          <pose>22.611763 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_158">
+          <pose>23.461763 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_159">
+          <pose>24.911762 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_160">
+          <pose>26.361763 -1.787500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_161">
+          <pose>23.461763 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_162">
+          <pose>24.911762 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_163">
+          <pose>26.361763 -2.312500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_164">
+          <pose>15.961763 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_165">
+          <pose>17.411762 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_166">
+          <pose>18.861762 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_167">
+          <pose>15.961763 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_168">
+          <pose>17.411762 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_169">
+          <pose>18.861762 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_170">
+          <pose>19.711763 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_171">
+          <pose>21.161762 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_172">
+          <pose>22.611763 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_173">
+          <pose>19.711763 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_174">
+          <pose>21.161762 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_175">
+          <pose>22.611763 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_176">
+          <pose>23.461763 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_177">
+          <pose>24.911762 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_178">
+          <pose>26.361763 -3.112500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_179">
+          <pose>23.461763 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_180">
+          <pose>24.911762 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_181">
+          <pose>26.361763 -3.637500 1.125000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032501 0.032500 2.250000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_182">
+          <pose>8.109841 -1.068627 0.068107 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.608136 0.608136 0.099513</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_183">
+          <pose>28.705900 -0.090730 1.375000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.049999 8.875000 2.750000</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_184">
+          <pose>6.250000 4.425000 1.375000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.875000 0.050000 2.750002</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_185">
+          <pose>6.250000 -4.425000 1.375000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.875000 0.050000 2.750002</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_186">
+          <pose>21.161762 4.425000 1.375000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.875000 0.050000 2.750002</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_187">
+          <pose>21.161762 -4.425000 1.375000 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>14.875000 0.050000 2.750002</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_188">
+          <pose>28.622864 1.848852 1.031394 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.088821 1.509969 2.042899</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_189">
+          <pose>28.622864 0.004343 1.031394 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.088821 1.509968 2.042899</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="estrutura_190">
+          <pose>28.622864 -1.839773 1.031394 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.088821 1.509968 2.042899</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name="amr" canonical_link="base_link">
+      <pose>0 0 0.13 0 0 0</pose>
+      <link name="base_link">
+        <inertial>
+          <mass>12</mass>
+          <inertia>
+            <ixx>0.3</ixx>
+            <iyy>0.3</iyy>
+            <izz>0.4</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="base_collision">
+          <geometry>
+            <box>
+              <size>0.45 0.35 0.18</size>
+            </box>
+          </geometry>
+        </collision>
+        <collision name="apoio_traseiro">
+          <pose>-0.17 0 -0.105 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.025</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.01</mu>
+                <mu2>0.01</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <collision name="apoio_dianteiro">
+          <pose>0.17 0 -0.103 0 0 0</pose>
+          <geometry>
+            <sphere>
+              <radius>0.025</radius>
+            </sphere>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.01</mu>
+                <mu2>0.01</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="base_visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/robo_amr.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name="lidar" type="gpu_lidar">
+          <pose>0.063 0 0.218 0 0 0</pose>
+          <topic>/model/amr/scan</topic>
+          <update_rate>10</update_rate>
+          <always_on>true</always_on>
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159265</min_angle>
+                <max_angle>3.14159265</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.08</min>
+              <max>12</max>
+              <resolution>0.01</resolution>
+            </range>
+          </lidar>
+        </sensor>
+      </link>
+      <link name="left_wheel">
+        <pose>0 0.205 -0.055 0 0 0</pose>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.002</ixx>
+            <iyy>0.002</iyy>
+            <izz>0.002</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <pose>0 0 0 1.5707963267948966 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.075</radius>
+              <length>0.035</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <pose>0 0 0 1.5707963267948966 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>meshes/roda_esquerda.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <link name="right_wheel">
+        <pose>0 -0.205 -0.055 0 0 0</pose>
+        <inertial>
+          <mass>0.5</mass>
+          <inertia>
+            <ixx>0.002</ixx>
+            <iyy>0.002</iyy>
+            <izz>0.002</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <pose>0 0 0 1.5707963267948966 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.075</radius>
+              <length>0.035</length>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <pose>0 0 0 1.5707963267948966 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>meshes/roda_direita.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+      <joint name="left_wheel_joint" type="revolute">
+        <pose relative_to="base_link">0 0.205 -0.055 0 0 0</pose>
+        <parent>base_link</parent>
+        <child>left_wheel</child>
+        <axis>
+          <xyz expressed_in="base_link">0 1 0</xyz>
+          <limit>
+            <lower>-1000</lower>
+            <upper>1000</upper>
+            <effort>10</effort>
+            <velocity>30</velocity>
+          </limit>
+        </axis>
+      </joint>
+      <joint name="right_wheel_joint" type="revolute">
+        <pose relative_to="base_link">0 -0.205 -0.055 0 0 0</pose>
+        <parent>base_link</parent>
+        <child>right_wheel</child>
+        <axis>
+          <xyz expressed_in="base_link">0 1 0</xyz>
+          <limit>
+            <lower>-1000</lower>
+            <upper>1000</upper>
+            <effort>10</effort>
+            <velocity>30</velocity>
+          </limit>
+        </axis>
+      </joint>
+      <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+        <left_joint>left_wheel_joint</left_joint>
+        <right_joint>right_wheel_joint</right_joint>
+        <wheel_separation>0.41</wheel_separation>
+        <wheel_radius>0.075</wheel_radius>
+        <topic>/model/amr/cmd_vel</topic>
+        <odom_topic>/model/amr/odometry</odom_topic>
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_link</child_frame_id>
+      </plugin>
+    </model>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+  </world>
+</sdf>
